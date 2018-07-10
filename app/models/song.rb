@@ -4,9 +4,7 @@ class Song < ActiveRecord::Base
   validates_numericality_of :release_year, less_than_or_equal_to
 
   def current_year
-    if self.release_year > D
-
-    end
+    Date.current.year
   end
 
 end
