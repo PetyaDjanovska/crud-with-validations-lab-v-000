@@ -10,6 +10,8 @@ class SongsController < ApplicationController
 
   def update
     @song.update(song_params)
+    if @song.valid?
+      redirect_to song_path(@song)
   end
 
   def show
