@@ -21,7 +21,7 @@
     <%= check_box "released", @song.released %>
   </div>
 
-  <div class="field <%= ' field_with_errors' if @post.errors[:content].any? %>">
+  <div class="field <%= ' field_with_errors' if @post.errors[:release_year].any? %>">
     <%= label_tag "content", "Content" %>
     <br />
     <%= text_area_tag "content", @post.content %>
