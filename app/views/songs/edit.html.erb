@@ -18,7 +18,7 @@
   <div class="field<%= ' field_with_errors' if @song.errors[:released].any? %>">
     <%= label_tag "released", "Released" %>
     <p>Must be either "Fiction" or "Non-Fiction".</p>
-    <%= check_box "released", @post.category %>
+    <%= check_box "released", @song.released %>
     <p>
       Please type carefully as our top scientists are working around the clock to
       enable state-of-the-art dropdown technology for this form field.
