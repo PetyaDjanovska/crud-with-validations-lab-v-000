@@ -10,6 +10,8 @@ class Song < ActiveRecord::Base
   #     errors.add(:release_year, "can not be in the future")
     # end
   # end
-
+  def current_year
+    Date.current.year
+  end
 
 end
