@@ -6,7 +6,8 @@ class Song < ActiveRecord::Base
   validates :artist_name, presence: true
 
   def future_release_year
-    Date.current.year
+    if self.release_year > Date.current.year
+      errors.add(:release_year, "can not be in the future")
   end
 
 
