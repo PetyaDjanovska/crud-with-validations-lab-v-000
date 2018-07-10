@@ -9,8 +9,7 @@ class Song < ActiveRecord::Base
   end
 
   def unreleased
-    if !self.released?
-    end
+    !self.released?
   end
 
 end
