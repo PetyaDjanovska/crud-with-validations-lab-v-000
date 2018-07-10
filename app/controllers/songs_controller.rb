@@ -15,6 +15,10 @@ class SongsController < ApplicationController
     else
       render :edit
     end
+
+    def destroy
+      @song.destroy
+    end
   end
 
   def show
