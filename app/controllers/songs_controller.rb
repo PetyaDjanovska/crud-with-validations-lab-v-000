@@ -8,6 +8,10 @@ class SongsController < ApplicationController
   def edit
   end
 
+  def update
+    @song.update(song_params)
+  end
+
   def show
   end
 
