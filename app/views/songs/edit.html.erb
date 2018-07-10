@@ -17,13 +17,12 @@
 
   <div class="field<%= ' field_with_errors' if @song.errors[:released].any? %>">
     <%= label_tag "released", "Released" %>
-    <p>Must be either "Fiction" or "Non-Fiction".</p>
     <%= check_box "released", @song.released %>
   </div>
 
   <div class="field <%= ' field_with_errors' if @post.errors[:release_year].any? %>">
-    <%= label_tag "content", "Content" %>
-    <br />
+    <%= label_tag "release_year", "Release Year" %>
+    <p>Must not be future date.</p>
     <%= text_area_tag "content", @post.content %>
   </div>
   <%= submit_tag "Update" %>
