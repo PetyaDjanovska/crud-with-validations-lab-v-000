@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
     Date.current.year
   end
 
-  def not_released
+  def unreleased
     if !self.released?
     end
   end
