@@ -5,12 +5,6 @@ class Song < ActiveRecord::Base
   validates :release_year, numericality: {less_than_or_equal_to: :current_year, allow_nil: true}
   validates :artist_name, presence: true
 
-  # def future_release_year
-  #   if self.release_year > Date.current.year
-  #     errors.add(:release_year, "can not be in the future")
-    # end
-  # end
-
   def current_year
     Date.current.year
   end
