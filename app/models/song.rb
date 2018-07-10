@@ -3,6 +3,8 @@ class Song < ActiveRecord::Base
   validates :release_year, presence: true if: :released?
 
 
-  def
+  def released?
+    self.released?
+  end
 
 end
