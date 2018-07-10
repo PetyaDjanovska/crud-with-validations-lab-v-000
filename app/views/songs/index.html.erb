@@ -1,6 +1,7 @@
-<table style="width:100%">
+
   <tr>Song title</tr>
 <% @songs.each do |s| %>
-  <td><%= s.title %></td>
+  <table style="width:100%">
+    <tr><%= s.title %></tr>
+  </table>
 <% end %>
-</table>
