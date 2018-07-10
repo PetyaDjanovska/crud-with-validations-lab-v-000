@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
   # validates_numericality_of :release_year, less_than_or_equal_to: :current_year
   validates :artist_name, presence: true
 
-  def current_year
+  def future_release_year
     Date.current.year
   end
 
